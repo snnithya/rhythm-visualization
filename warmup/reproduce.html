@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.58/Tone.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"></script> -->
+    <!-- Core library, since we're going to use a player -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.18.1"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+    <title>Listen</title>
+</head>
+
+<body>
+    <div style="margin: 10%;">
+        <nav>
+            <div class="menu" style="float: left;">
+                <a class="active" href="warmup.html">0. Warm up</a>
+                <a class="pseudo button">1. Audio Test 1</a>
+                <a class="pseudo button">2. Audio Test 2</a>
+                <a class="pseudo button">3. Piano Roll Test 1</a>
+                <a class="pseudo button">4. Piano Roll Test 2</a>
+                <a class="pseudo button">5. Score Test 1</a>
+                <a class="pseudo button">6. Score Test 2</a>
+
+            </div>
+            <a class="button error" href="../thank_you.html" style="float: right;">Quit</a>
+        </nav>
+        <p>Now tap on the space bar as the improvisation plays. This is used to set up the baseline.
+        </p>
+
+        <div id="test1 " style="display: inline-flexbox; text-align: center;" class="col s16 ">
+
+            <button class="" id="start">Play</button>
+            <button class="" id="stop">Stop</button>
+            <button class="" id="save">Save</button>
+        </div>
+        <script src="../static/js/tap.js"></script>
+        <div>
+            <a href="finish.html">Next</a>
+        </div>
+    </div>
+</body>

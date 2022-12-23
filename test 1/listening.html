@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+    <title>Listen</title>
+</head>
+
+<body>
+    <div style="margin: 10%;">
+        <nav>
+            <div class="menu" style="float: left;">
+                <a class="pseudo button">0. Warm up</a>
+                <a class="active">1. Audio Test 1</a>
+                <a class="pseudo button">2. Audio Test 2</a>
+                <a class="pseudo button">3. Piano Roll Test 1</a>
+                <a class="pseudo button">4. Piano Roll Test 2</a>
+                <a class="pseudo button">5. Score Test 1</a>
+                <a class="pseudo button">6. Score Test 2</a>
+
+            </div>
+            <a class="button error" href="../thank_you.html" style="float: right;">Quit</a>
+        </nav>
+        <p>Once you click on play, the countdown timer will start for 90s after which you will automatically go to the next page. If you think you are ready before the 90s, feel free to click on the next button below. You can also pause and stop the recording
+            as you like. You can slow down the audio using the tempo slider below.
+        </p>
+        <div style="display: flex;">
+            <input type="range" min="0" max="1" step="0.1" value="1" class="slider" id="tempo" style="width: 80%;">
+            <p id="tempoVal" style="float: right;">1</p>
+        </div>
+        <div id="countdownDiv" style="display: inline-flexbox; text-align: center; background-color: lightgray; margin-left: 30%; margin-right: 30%;">
+            <h3>Countdown Timer</h3>
+            <div style="display: inline-flex; text-align: center;">
+                <b><p id="time">90</p></b>
+                <b><p> s</p></b>
+            </div>
+        </div>
+
+        <div id="test1 " style="display: inline-flexbox; text-align: center;" class="col s16 ">
+
+            <button class="" id="start">Play</button>
+            <button class="" id="stop">Stop</button>
+        </div>
+        <div>
+            <a href="baseline.html" id="next">Next</a>
+        </div>
+        <script src="../static/js/play.js"></script>
+    </div>
+</body>

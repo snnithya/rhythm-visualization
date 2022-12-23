@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.58/Tone.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"></script> -->
+    <!-- Core library, since we're going to use a player -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.18.1"></script>
+    <!--Model we want to use -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/music_vae.js"></script> -->
+    <title>Listen</title>
+</head>
+
+<body>
+    <div id="test1 " class="col s16 ">
+        <button class="" id="start">Play</button>
+        <button class="" id="stop">Stop</button>
+    </div>
+    <script src="../../static/js/tap.js"></script>
+
+    <h2 id="PianoRollSVGVisualizer">mm.PianoRollSVGVisualizer</h2>
+    <section>
+        <div class="visualizer-container">
+            <svg id="svgBox" style="width: 80%;"></svg>
+        </div>
+    </section>
+
+    <h2>mm.StaffSVGVisualizer</h2>
+    <section>
+        <div class="visualizer-container">
+            <div id="staff"></div>
+        </div>
+    </section>
+
+    <h2>mm.WaterfallSVGVisualizer</h2>
+    <section>
+        <label><input type="checkbox" id="waterfallCheckbox">Show only necessary octaves</label>
+        <br>
+        <div class="visualizer-container">
+            <div id="waterfall">
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <a href="../templates/exp1_tapping.html">Next</a>
+    </div>
+</body>
