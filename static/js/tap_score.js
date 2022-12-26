@@ -29,6 +29,10 @@ window.onload = () => {
     initParent();
 }
 
+document.getElementById("next").onclick = () => {
+  stop();
+}
+
 window.addEventListener("keydown", function(event){
     if(event.code === "KeyB" || event.code === "KeyV") {
         console.log(Tone.Transport.getSecondsAtTime())

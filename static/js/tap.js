@@ -20,6 +20,10 @@ window.onload = () => {
   initPlayer();
 };
 
+document.getElementById("next").onclick = () => {
+  stop();
+}
+
 function loadFile(url) {
     console.log('in loadFile')
    initPlayer();
