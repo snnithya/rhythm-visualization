@@ -5,7 +5,7 @@ var play = false;
 var timer = 210;
 var tonePlayer = null;
 var intId = null;
-var duration = 10;
+var duration = 13;
 var origTempo = 0;
 var origTempos = [];
 var tempo = 1;
@@ -81,7 +81,7 @@ async function initPlayerAndVisualizer(seq) {
   playBtn.textContent = 'Play';
   
     tonePlayer = await new Tone.Player(audioPath).toDestination();
-    duration = visualizers[0].noteSequence.totalTime;
+    // duration = visualizers[0].noteSequence.totalTime;
     player.output.mute = true;
     // tonePlayer.sync().start(0);
   
