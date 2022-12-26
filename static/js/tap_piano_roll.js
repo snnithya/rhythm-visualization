@@ -30,7 +30,7 @@ window.onload = () => {
 }
 
 window.addEventListener("keydown", function(event){
-    if(event.code === "KeyB") {
+    if(event.code === "KeyB" || event.code === "KeyV") {
         console.log(Tone.Transport.getSecondsAtTime())
         keyPresses.push([Tone.Transport.getSecondsAtTime()])
     }
