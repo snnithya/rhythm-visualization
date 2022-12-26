@@ -1,7 +1,7 @@
 var audioPath = null;
 var audio = null;
 var play = false;
-var timer = 90;
+var timer = 210;
 
 document.getElementById("start").onclick = () => {
     playAudio();    // TODO - make audioPath a variable
