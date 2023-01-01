@@ -9,6 +9,7 @@ let visualizers = []
 let currentSequence = null;
 var tonePlayer = null;
 var tonePlayer2 = null;
+var down = false;
 
 const playBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop')
@@ -50,14 +51,25 @@ async function initPlayer() {
 
 window.addEventListener("keydown", function(event){
     if(event.code === "KeyB" || event.code === "KeyV") {
+      if(down === false){
+        down = true;
         console.log(Tone.Transport.getSecondsAtTime())
         // keyPresses.push({
         //     "time": Tone.Transport.getSecondsAtTime(),
         //     "note": "A3"
         // })
         keyPresses.push([Tone.Transport.getSecondsAtTime()])
+      }
     }
     // this.localStorage.setItem("keys", keyPresses);
+}
+);
+
+window.addEventListener("keyup", function(event){
+  if(event.code === "KeyB" || event.code === "KeyV") {
+    down = false;
+  }
+  // this.localStorage.setItem("keys", keyPresses);
 }
 );
 

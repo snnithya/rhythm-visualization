@@ -9,6 +9,7 @@ var duration = 10;
 var keyPresses = [];
 var tempo = 1;
 var currentSequence = null;
+var down = false;
 firstPlay = true;
 
 
@@ -35,9 +36,20 @@ document.getElementById("next").onclick = () => {
 
 window.addEventListener("keydown", function(event){
     if(event.code === "KeyB" || event.code === "KeyV") {
+      if(down===false){
+        down = true;
         console.log(Tone.Transport.getSecondsAtTime())
         keyPresses.push([Tone.Transport.getSecondsAtTime()])
     }
+  }
+}
+);
+
+window.addEventListener("keyup", function(event){
+  if(event.code === "KeyB" || event.code === "KeyV") {
+    down = false;
+  }
+  // this.localStorage.setItem("keys", keyPresses);
 }
 );
 
